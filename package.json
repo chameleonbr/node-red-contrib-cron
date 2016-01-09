@@ -4,7 +4,8 @@
   "description": "Node red node for CRON Scheduler.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
     }
   },
   "author": {
-    "name": "ChameleonBR"
+    "name": "Andre Alexandre Avila"
   },
   "license": "MIT",
   "bugs": {
