@@ -22,6 +22,9 @@ module.exports = function (RED) {
                 job.stop();
             });
             node.status({fill: "blue", shape: "dot", text: "Job deployed"});
+            setTimeout(function () {
+                node.status({});
+            }, 500);
             job.start();
         } catch (err) {
             node.error("Invalid Expression");
