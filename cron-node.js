@@ -17,9 +17,10 @@ module.exports = function (RED) {
                 node.send(msg);
                 node.status({});
             });
-            this.on('close', function () {
+            this.on('close', function (done) {
                 node.status({fill: "red", shape: "dot", text: "Job stopped"});
                 job.stop();
+                done();
             });
             node.status({fill: "blue", shape: "dot", text: "Job deployed"});
             setTimeout(function () {
@@ -31,4 +32,4 @@ module.exports = function (RED) {
         }
     }
     RED.nodes.registerType("cron", CronIn);
-}
+};
